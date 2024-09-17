@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUNGUN - Developer Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(1, 1, 33);
+
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 270px;
+           
+            height: 60px;
+            background-color: rgb(9, 9, 64);
+
+        }
+
+        .right {
+            display: flex;
+            gap: 40px;
+            margin-left: 35px;
+
+            list-style: none;
+        }
+
+        .right a {
+            text-decoration: none;
+            color: white;
+            opacity: 0;
+            animation: slideTop .5s ease forwards;
+
+        }
+
+        .right a:hover {
+            color: rgb(148, 148, 240);
+            font-size: 1.01rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 1s ease forwards;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 85px 0;
+            height: 57vh;
+            align-items: center;
+        }
+
+        .leftSection {
+
+            width: 35%;
+            font-size: 2.3rem;
+        }
+
+        .rightSection {
+            width: 35%;
+        }
+
+        .rightSection img {
+
+            width: 80%;
+            margin: 30px 0px;
+        }
+
+        .purple {
+            /* color: rgb(175, 114, 232);*/
+            color: rgb(114, 114, 231);
+        }
+
+        #element {
+            color: rgb(114, 114, 231);
+        }
+
+        .secondSection {
+            height: 50px;
+            max-width: 80vw;
+            margin-left: 100px;
+
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgb(153, 153, 220);
+            height: 1.2px;
+            margin: 40px 55px;
+        }
+
+
+
+        .home-sci a {
+            display: inline-flex;
+            width: 40px;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            background: transparent;
+            border: 2px solid rgb(14, 103, 109);
+            border-radius: 50%;
+            font-size: 28px;
+            color: #0ef;
+            text-decoration: none;
+            margin: 10px 4px;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 1s ease forwards;
+        }
+
+        .home-sci a:hover {
+            background-color: #0ef;
+            color: rgb(14, 103, 109);
+            box-shadow: 0 0 10px #0ef;
+        }
+
+        .btn-box {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: rgb(18, 210, 223);
+            border-radius: 40px;
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideBottomTop 2s ease forwards;
+        }
+
+        .btn-box:hover {
+            box-shadow: 0 0 10px #0ef;
+        }
+
+        .mid {
+            opacity: 0;
+            animation: slideBottom 1s ease forwards;
+            animation-delay: .7s;
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideTop {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottom {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottomTop {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        .secondSection {
+            margin-top: 22px;
+            height: 75vh;
+            align-items: center;
+            display: flex;
+            gap: 246px;
+            margin-left: 124px;
+            justify-content: space-around;
+
+        }
+
+        .secondSection .rightSection2 {
+            gap: 20px;
+        }
+
+        .rightSection2 {
+            margin-top: 0px;
+        }
+
+        .rightSection2 .btn-box {
+            margin-bottom: 23px;
+
+        }
+
+        .rightSection2 h1 {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .rightSection2 h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .rightSection2 p {
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .rightSection2 h1 span {
+            color: rgb(8, 228, 244);
+
+        }
+
+        .leftSection2 img {
+            margin-left: 10px;
+            width: 300px;
+            height: 250px;
+            border: 2px solid rgb(8, 228, 244);
+            border-radius: 80%;
+            background-color: rgb(8, 228, 244);
+
+            box-shadow: 0 0 20px rgb(6, 233, 249);
+        }
+
+        .thirdSection {
+
+            margin-top: 40px;
+            height: 160vh;
+        }
+
+        .thirdSection .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 75px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+
+        }
+
+        .boxes .box {
+
+            height: 30vh;
+            width: 35vh;
+            border-radius: 17px;
+            box-shadow: 0 0 20px rgb(96, 79, 246);
+
+        }
+
+        .boxes .box:hover {
+            border: 2px solid rgb(88, 178, 251);
+            height: 31vh;
+            width: 36vh;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgb(111, 194, 245);
+        }
+
+        .thirdSection h1 {
+            font-size: 35px;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thirdSection h1 span {
+            color: #0ef;
+        }
+
+        .box i {
+            font-size: 60px;
+            justify-content: center;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .box img,
+        svg {
+            display: flex;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 50px;
+        }
+
+        .thirdSection .box h2 {
+            display: flex;
+            margin: 15px;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .thirdSection .box h3 {
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+        .thirdSection .container1 .heading {
+            margin: 40px;
+            text-decoration: underline;
+
+        }
+
+        .thirdSection .container2 .heading {
+            margin-top: 80px;
+            margin-left: 40px;
+            text-decoration: underline;
+
+        }
+
+        .container2 .radial-bars {
+            width: 100%;
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+
+        }
+
+        .container2 .radial-bars .radial-bar {
+            position: relative;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+
+        }
+
+        .radial-bar .percentage {
+            opacity: 0;
+            animation: slideBottomTop 2s ease forwards;
+        }
+
+
+
+
+        .radial-bars .radial-bar svg {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-5%, -5%) rotate(-90deg);
+            width: 120px;
+            height: 160px;
+
+        }
+
+        .radial-bars .radial-bar .progress-bar {
+            stroke-width: 10;
+            /* stroke: black;*/
+            fill: transparent;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 502;
+            stroke-linecap: round;
+            animation: animate-bar 1s linear forwards;
+        }
+
+        @keyframes animate-bar {
+            100% {
+                stroke-dashoffset: -1;
+            }
+        }
+
+        .path {
+            stroke-width: 10;
+            stroke: #0ef;
+            fill: transparent;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 502;
+            stroke-linecap: round;
+        }
+
+        .path-1 {
+            animation: animate-path1 1s 1s linear forwards;
+        }
+
+        .path-2 {
+            animation: animate-path2 1s 1s linear forwards;
+        }
+
+        .path-3 {
+            animation: animate-path3 1s 1s linear forwards;
+        }
+
+        .path-4 {
+            animation: animate-path4 1s 1s linear forwards;
+        }
+
+        @keyframes animate-path1 {
+            100% {
+                stroke-dashoffset: 75;
+            }
+        }
+
+        @keyframes animate-path2 {
+            100% {
+                stroke-dashoffset: 50;
+            }
+        }
+
+        @keyframes animate-path3 {
+            100% {
+                stroke-dashoffset: 125;
+            }
+        }
+
+        @keyframes animate-path4 {
+            100% {
+                stroke-dashoffset: 85;
+            }
+        }
+
+        .boxes .box .progress-line {
+            position: relative;
+            border: 2px solid rgb(63, 39, 247);
+            margin: 10px 20px;
+            border-radius: 10px;
+            width: 80%;
+            height: 5px;
+            background-color: #1f0b61;
+
+        }
+
+        @keyframes animate {
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
+        .box .progress-line span {
+            height: 100%;
+
+            background-color: #0ef;
+
+            position: absolute;
+            border-radius: 10px;
+            animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .box .percentage {
+            padding-top: 10px;
+            padding-left: 65px;
+            animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+
+        }
+
+        .box .progress-line.html span {
+
+            width: 90%;
+        }
+
+        .box .progress-line.css span {
+            width: 80%;
+        }
+
+        .box .progress-line.js span {
+            width: 70%;
+        }
+
+        .box .progress-line.rjs span {
+            width: 50%;
+        }
+
+        .box .progress-line.java span {
+            width: 85%;
+        }
+
+        .box .progress-line.py span {
+            width: 75%;
+        }
+
+        .box .progress-line.pbi span {
+            width: 85%;
+        }
+
+        .fourthSection {
+            height: 115vh;
+        }
+
+        .fourthSection h1 span {
+            color: #0ef;
+        }
+
+        .fourthSection h1 {
+            font-size: 32px;
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        .fourthSection .project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+
+        }
+
+        .fourthSection .project img {
+            width: 70vh;
+            height: 40vh;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgb(96, 79, 246);
+
+        }
+
+        .fourthSection .project img:hover {
+            border: 2px solid rgb(88, 178, 251);
+
+            cursor: pointer;
+            box-shadow: 0 0 40px rgb(111, 194, 245);
+        }
+
+        .project a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .project a span {
+
+            color: white;
+            font-weight: 800;
+            margin-top: 8px;
+            animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+
+        }
+
+        .project a span div {
+            font-weight: 500;
+            color: #0ef;
+        }
+
+        .lastSection {
+            gap: 50px;
+            display: flex;
+            height: 78vh;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        .lastSection h1 {
+            margin-bottom: 18px;
+            font-size: 45px;
+        }
+
+        .lastSection h1 span {
+            color: #0ef;
+
+        }
+
+        .lastSection h3 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .lastSection .words {
+            font-size: 15px;
+            color: rgb(112, 111, 111);
+        }
+
+        .lastSection .contact-text {
+            margin-top: 30px;
+            margin-bottom: 90px;
+        }
+        .lastSection .contact-form{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            animation: slideBottomTop 2s ease forwards;
+        }
+
+
+        .lastSection .contact-form form input {
+           
+            padding:12px 0px;
+            padding-right: 291px;
+            padding-left: 5px;
+            color: black;
+            font-weight: 800;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            background-color: rgb(101, 100, 100);
+
+        }
+        .contact-form form input:hover{
+            border: 2px solid black;
+            cursor: pointer;
+            box-shadow:  0 0 20px rgb(212, 209, 240);
+        }
+        .contact-form form textarea:hover{
+            border: 2px solid black;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgb(212, 209, 240);
+        }
+        
+      
+
+        .lastSection .contact-form form textarea {
+            text-align: left;
+            color: #000;
+            font-weight: bolder;
+            padding:12px 0px;
+            padding-right: 180px;
+            padding-left: 5px;
+            margin-bottom: 5px;
+            margin-top: 2px;
+            border-radius: 5px;
+            background-color: rgb(101, 100, 100);
+        }
+
+        .lastSection .contact-form .send {
+            background-color: #0ef;
+           padding: 12px 190px;
+            width: 85vh;
+            opacity: 0;
+            animation: slideBottomTop 2s ease forwards;
+            border-radius: 30px;
+            box-shadow: 0 0 20px rgb(96, 79, 246);
+           
+        }
+        .lastSection .contact-form .send:hover {
+            border: 2px solid #0ef;
+
+            cursor: pointer;
+            box-shadow: 0 0 40px rgb(111, 194, 245);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Gungun's Portfolio</div>
+            <div class="right">
+
+                <a href="#home" onclick="scrollToSection('home')">Home</a>
+                <a href="#about" onclick="scrollToSection('about')">About</a>
+                <a href="#skills" onclick="scrollToSection('skills')">Skills</a>
+                <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
+                <a href="#contact" onclick="scrollToSection('contact')">Contact Me</a>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection" id="about">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Gungun</span>
+                <div class="mid">and I am a passionate</div>
+                <span id="element"></span>
+                <div class="home-sci">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://www.instagram.com/gungun1173?igsh=MWNocndwdmIzbzBybg=="><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/gungun-goyal-2961a3257"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/gungun1173" target="_blank"><i class="bx bxl-github"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1vpHBSpVq-i30yvdVdLkzkMfpM_1UkAbe/view?usp=drivesdk" class="btn-box">More About Me</a>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="about">
+            <div class="leftSection2">
+                <img src="my.jpg" alt="">
+            </div>
+            <div class="rightSection2">
+                <h1>About <span>Me</span></h1>
+                <h2>FrontEnd Web Developer!!</h2>
+                <p>As a front-end web developer, I focus on creating responsive, intuitive, and visually appealing user
+                    interfaces using HTML, CSS, and JavaScript. I ensure that websites are not only functional but also
+                    optimized for performance across various devices and browsers. I stay updated with the latest
+                    front-end frameworks and trends, such as React or Vue.js,
+                    to build modern, interactive web applications. I continuously research and implement the latest
+                    trends and technologies, including
+                    frameworks like React or Vue.js, to improve the efficiency and interactivity of the websites I
+                    develop.
+
+                    My goal is to bridge the gap between design and functionality, creating websites that not only look
+                    great but also perform seamlessly, providing users with a fluid, enjoyable experience while meeting
+                    the business objectives of clients and stakeholders.</p>
+                <a href="https://drive.google.com/file/d/1vpHBSpVq-i30yvdVdLkzkMfpM_1UkAbe/view?usp=drivesdk" class="btn-box">More About Me</a>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection" id="skills">
+            <h1>My <span>Skills</span></h1>
+            <div class="container1">
+
+                <h2 class="heading">Technical Skills</h2>
+                <div class="boxes">
+                    <div class="box">
+                        <i class="bx bxl-html5" style="color: red"></i>
+                        <h2>HTML</h2>
+                        <div class="progress-line html">
+                            <span></span>
+                            <div class="percentage">90%</div>
+                        </div>
+                    </div>
+                    <div class="box"> <i class="bx bxl-css3" style="color: rgb(75, 148, 238)"></i>
+                        <h2>CSS</h2>
+                        <div class="progress-line css">
+                            <span></span>
+                            <div class="percentage">80%</div>
+                        </div>
+                    </div>
+                    <div class="box"> <i class="bx bxl-javascript" style="color: rgb(245, 170, 32)"></i>
+                        <h2>JavaScript</h2>
+                        <div class="progress-line js">
+                            <span></span>
+                            <div class="percentage">70%</div>
+                        </div>
+                    </div>
+                    <div class="box"> <i class="bx bxl-react" style="color: cyan"></i>
+                        <h2>ReactJS</h2>
+                        <div class="progress-line rjs">
+                            <span></span>
+                            <div class="percentage">50%</div>
+                        </div>
+                    </div>
+                    <div class="box"> <i class="bx bxl-java" style="color: rgb(124, 178, 221)"></i>
+                        <h2>Core Java</h2>
+                        <div class="progress-line java">
+                            <span></span>
+                            <div class="percentage">85%</div>
+                        </div>
+                    </div>
+                    <div class="box"> <i class="bx bxl-python" style="color: rgb(247, 6, 223)"></i>
+                        <h2>Python</h2>
+                        <div class="progress-line py">
+                            <span></span>
+                            <div class="percentage">75%</div>
+                        </div>
+                    </div>
+                    <div class="box"> <img src="pbi.png" alt="">
+                        <h2>PowerBI</h2>
+                        <div class="progress-line pbi">
+                            <span></span>
+                            <div class="percentage">85%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container2">
+
+                <h2 class="heading">Professional Skills</h2>
+                <div class="radial-bars">
+
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewbox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="100"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">85%</div>
+                        <div class="text">Creativity</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewbox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="100"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Communication</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewbox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="100"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">75%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewbox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="100"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">80%</div>
+                        <div class="text">Teamwork</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section class="fourthSection" id="projects">
+            <h1>Latest<span>Projects</span></h1>
+            <div class="project">
+
+                <a href=""><img src="chatting.png" alt=""><span>Chatting Application <div>(Technology used: Java, Swing,
+                            Applet, Socket Programming.)</div></span> </a>
+                <a href="https://github.com/gungun1173/Twitter_Clone"><img src="twitterclone.jpg" alt=""><span>Twitter Clone <div>(Technology used: HTML, CSS)
+                        </div></span></a>
+                <a href="https://github.com/gungun1173/Virat_Kohli_Career_Statistics_Dashboard"><img src="viratkohli.webp" alt=""><span>Virat Kohli Carer Statistics Dashboard <div>
+                            (Technology used: MS Excel, PowerBI Desktop)</div></span></a>
+                <a href="https://github.com/gungun1173/Netflix_clone"><img src="netflix.png" alt=""><span>Netflix Clone <div>(Technology used: Html, CSS)</div>
+                        </span></a>
+            </div>
+        </section>
+        <hr>
+        <section class="lastSection" id="contact">
+            <div class="contact-list">
+                <h1>Contact<span>Me</span></h1>
+
+                <h3>Let's Work Together!!</h3>
+                <span class="words">Have a project idea or need help with something? I'd love to hear from you! Whether
+                    you’re looking for a collaboration, advice, or just want to say hello, feel free to reach out. You
+                    can contact me via email or connect through my social profiles. I’ll get back to you as soon as
+                    possible! <br>
+                    Reach out and let’s make it happen!</span>
+                <div class="contact-text">
+
+                    <div class="gmail"><i class='bx bxs-send' style='color:#09eaf9'></i>goyalgungun67@gmail.com
+                    </div>
+                    <div class="phone"><i class='bx bxs-phone' style='color:#09eaf9'></i>7597861266
+                    </div>
+                </div>
+                <div class="home-sci">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://www.instagram.com/gungun1173?igsh=MWNocndwdmIzbzBybg=="><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/gungun-goyal-2961a3257"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/gungun1173" target="_blank"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <input type="" placeholder="Enter Your Name" required>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="" placeholder="Enter Your Subject" class="name">
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+                    <input type="submit" value="Submit" class="send">
+                </form>
+            </div>
+        </section>
+        <hr>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Frontend Developer.', 'Data Analyst.', 'Java Developer.'],
+            typeSpeed: 50,
+        });
+
+        function scrollToSection(sectionId) {
+            // Scroll to the section
+         document.getElementById(sectionId).scrollIntoView({
+           behavior: 'smooth'
+         });
+
+            // Automatically refresh the page after 1 second
+            setTimeout(function() {
+                location.reload();
+            }, 700); // Adjust the time if necessary
+        }
+    </script>
+</body>
+
+</html>
